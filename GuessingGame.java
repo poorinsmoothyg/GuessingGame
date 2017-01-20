@@ -12,6 +12,7 @@ public class GuessingGame {
 	private int upperbound ;
 	private int secret ;
 	private String hint ;
+	private int count ;
 	
 	/**
 	 * Initialize a new game.
@@ -65,6 +66,11 @@ public class GuessingGame {
 	public void setHint(String hint){
 		this.hint = hint ;
 	}
-
+	public void setCount(){
+		this.count = count;
+	}
+	public int getCount(){
+		return this.count ;
+	}
 
 }
