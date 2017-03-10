@@ -1,4 +1,4 @@
-package oop2;
+package guessing;
 import java.util.Random;	// for random numbers
 /** 
  * GuessingGame of guessing a secret number.
@@ -41,14 +41,17 @@ public class GuessingGame {
 	public boolean guess(int number){
 		if (number == secret){
 			setHint("Correct! . The secret is "+secret);
+			count = 1 ;
 			return true ;
 		}
 		else{
 			if(number > secret){
 				setHint ("Sorry,your guess is too large.");
+				count++ ;
 			}
 			else if (number < secret){
 				setHint ("Sorry,your guess is too small.");
+				count++ ;
 			}
 			return false;
 		}
@@ -63,14 +66,12 @@ public class GuessingGame {
 	public String getHint() {
 		return hint ;
 	}
-	public void setHint(String hint){
+	
+	private void setHint(String hint){
 		this.hint = hint ;
 	}
-	public void setCount(){
-		this.count = count;
-	}
-	public int getCount(){
-		return this.count ;
-	}
 
+	public int getCount() {
+		return count ;
+	}
 }
